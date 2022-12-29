@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Complete = ({ task, refetch }) => {
 
     const handleDeleteTask = user => {
-        fetch(`http://localhost:5000/tasks/${task._id}`, {
+        fetch(`https://y-phi-one.vercel.app/tasks/${task._id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -28,7 +28,7 @@ const Complete = ({ task, refetch }) => {
                         <div>
     
                             <Link className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Not Completed</Link>
-                            <Link to="/completed" className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Completed</Link>
+                           
                         </div>
                     </div>
                 <img src={task.image} className="w-32 h-32" alt="" />

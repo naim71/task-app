@@ -36,7 +36,7 @@ const AddTask = () => {
                 console.log(addTask);
                 setImgurl(imgData.data.url);
 
-                fetch('http://localhost:5000/tasks',{
+                fetch('https://y-phi-one.vercel.app/tasks',{
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

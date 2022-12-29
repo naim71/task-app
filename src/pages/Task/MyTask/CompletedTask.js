@@ -10,7 +10,7 @@ const CompletedTask = () => {
     const { data: tasks = [], refetch } = useQuery({
         queryKey: ['tasks'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/task?email=${user?.email}`);
+            const res = await fetch(`https://y-phi-one.vercel.app/task?email=${user?.email}`);
             const data = await res.json();
             return data;
         }

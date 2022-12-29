@@ -22,7 +22,7 @@ const Signup = () => {
             email
         }
         
-        fetch('http://localhost:5000/users',{
+        fetch('https://y-phi-one.vercel.app/users',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

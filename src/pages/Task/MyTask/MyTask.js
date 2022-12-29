@@ -5,7 +5,7 @@ const MyTask = ({ task, refetch }) => {
     console.log(task);
 
     const handleDeleteTask = user => {
-        fetch(`http://localhost:5000/tasks/${task._id}`, {
+        fetch(`https://y-phi-one.vercel.app/tasks/${task._id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -18,7 +18,7 @@ const MyTask = ({ task, refetch }) => {
     }
 
     const handleComplete = () => {
-        fetch(`http://localhost:5000/tasks/${task._id}`, {
+        fetch(`https://y-phi-one.vercel.app/tasks/${task._id}`, {
             method: 'PUT'
         })
             .then(res => res.json())

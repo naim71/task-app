@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from '../../assets/image/image1.png'
+import { AuthContext } from '../../AuthContext/AuthProvider';
 
 const Home = () => {
+    const {user} = useContext(AuthContext);
+    console.log(user);
     return (
         <div className='mt-10 mb-10'>
             <p className='text-3xl mb-5 text-[#747474]'>Overview</p>
             <div className='bg-[#1874EE] w-full h-96 rounded-xl'>
-                <div>
-                    <p>Welcome Back Jennie!</p>
+                <div className='flex justify-around items-center'>
+                    <p className='text-3xl font-bold text-white'>Welcome Back, {user.displayName}</p>
                     <img src={img} alt="" className='w-64' />
                 </div>
             </div>

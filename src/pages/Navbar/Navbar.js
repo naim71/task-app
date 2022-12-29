@@ -15,7 +15,7 @@ const Navbar = () => {
                     <li><Link to='/home'>Home</Link></li>
                     <li><Link to='/add'>Add Task</Link></li>
                     <li><Link to='/mytask'>My Task</Link></li>
-                    <li><Link href="#work">Completed Task</Link></li>
+                    <li><Link to='/completedtask'>Completed Task</Link></li>
                     {user?.uid ?
                         <>
                             <button className='border border-blue-600 rounded-md '><Link onClick={logOut}>Logout</Link></button>
