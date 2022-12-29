@@ -10,19 +10,22 @@ const Navbar = () => {
         <div>
             <nav>
                 <input id="nav-toggle" type="checkbox" />
-                <div class="logo">TASK<strong>APP</strong></div>
+                <Link to='/' class="logo">TASK<strong>APP</strong></Link>
                 <ul class="links">
-                    <li><a href="#home">Add Task</a></li>
-                    <li><a href="#about">My Task</a></li>
-                    <li><a href="#work">Completed Task</a></li>
-                    <li><a href="#work">Sign up</a></li>
+                    <li><Link to='/home'>Home</Link></li>
+                    <li><Link href="#home">Add Task</Link></li>
+                    <li><Link href="#about">My Task</Link></li>
+                    <li><Link href="#work">Completed Task</Link></li>
                     {user?.uid ?
                         <>
                             <li><Link onClick={logOut}>Logout</Link></li>
 
                         </>
                         :
-                        <li><Link to='/signin'>Sign In</Link></li>
+                        <>
+                            <li><Link to='/signin'>Sign In</Link></li>
+                            <li><Link to='/signup'>Sign up</Link></li>
+                        </>
                     }
 
                 </ul>

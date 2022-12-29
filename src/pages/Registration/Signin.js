@@ -80,7 +80,7 @@ const Signin = () => {
                     </button>
 
                 </div>
-                <p className="text-xs text-center sm:px-6 text-gray-600 mb-5">Don't have an account?
+                <p className="text-sm text-center sm:px-6 text-gray-600 mb-5">Don't have an account?
                     <Link to='/signup' rel="noopener noreferrer" href="#" className="underline text-gray-800">Sign up</Link>
                 </p>
             </div>
