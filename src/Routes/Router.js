@@ -3,6 +3,9 @@ import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
 import Signin from "../pages/Registration/Signin";
 import Signup from "../pages/Registration/Signup";
+import AddTask from "../pages/Task/AddTask/AddTask";
+import AllTasks from "../pages/Task/MyTask/AllTasks";
+import CompletedTask from "../pages/Task/MyTask/CompletedTask";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +28,21 @@ export const router = createBrowserRouter([
             {
                 path: "/signup",
                 element: <Signup></Signup>
+
+            },
+            {
+                path: "/add",
+                element: <AddTask></AddTask>
+
+            },
+            {
+                path: "/mytask",
+                element: <AllTasks></AllTasks>
+
+            },
+            {
+                path: "/completedtask",
+                element: <CompletedTask></CompletedTask>
 
             },
         ]

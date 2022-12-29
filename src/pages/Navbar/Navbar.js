@@ -13,12 +13,12 @@ const Navbar = () => {
                 <Link to='/' class="logo">TASK<strong>APP</strong></Link>
                 <ul class="links">
                     <li><Link to='/home'>Home</Link></li>
-                    <li><Link href="#home">Add Task</Link></li>
-                    <li><Link href="#about">My Task</Link></li>
+                    <li><Link to='/add'>Add Task</Link></li>
+                    <li><Link to='/mytask'>My Task</Link></li>
                     <li><Link href="#work">Completed Task</Link></li>
                     {user?.uid ?
                         <>
-                            <li><Link onClick={logOut}>Logout</Link></li>
+                            <button className='border border-blue-600 rounded-md '><Link onClick={logOut}>Logout</Link></button>
 
                         </>
                         :

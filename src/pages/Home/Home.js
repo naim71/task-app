@@ -3,7 +3,7 @@ import img from '../../assets/image/image1.png'
 
 const Home = () => {
     return (
-        <div className='mt-10'>
+        <div className='mt-10 mb-10'>
             <p className='text-3xl mb-5 text-[#747474]'>Overview</p>
             <div className='bg-[#1874EE] w-full h-96 rounded-xl'>
                 <div>

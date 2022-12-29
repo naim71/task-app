@@ -15,7 +15,32 @@ const Signup = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name,email,password);
+        //console.log(name,email,password);
+
+        const user = {
+            name,
+            email
+        }
+        
+        fetch('http://localhost:5000/users',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            form.reset();
+            // if(data.acknowledged){
+            //     toast.success('Product Added Successfully!')
+            //     navigate('/dashboard/myproducts')
+            // }
+        }
+        )
+
         
 
         if(password.length < 6){
