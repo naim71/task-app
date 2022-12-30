@@ -27,7 +27,7 @@ const Complete = ({ task, refetch }) => {
                                 <p className='mb-3'>{task.details}</p>
                                 <div className='flex justify-center items-center space-x-5'>
                                     <button className='bg-red-500 py-2 px-3 hover:bg-red-700 rounded-md text-white' onClick={handleDeleteTask}>Delete</button>
-                                    <Link className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Not Completed</Link>
+                                    <Link  to='/mytask' className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Not Completed</Link>
                                 </div>
                             </div>
                             <img src={task.image} className="w-32 h-32" alt="" />

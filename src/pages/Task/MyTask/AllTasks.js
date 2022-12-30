@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext} from 'react';
 import { AuthContext } from '../../../AuthContext/AuthProvider';
 import MyTask from './MyTask';
+import './AllTask.css'
 
 
 const AllTasks = () => {
@@ -26,7 +27,7 @@ const AllTasks = () => {
 
 
     return (
-        <div className='grid grid-cols-2 gap-5 mt-10'>
+        <div className='grid grid-cols-2 gap-5 mt-10 my-task'>
             {
                 tasks.map(task =>
                     <MyTask task={task} refetch={refetch}></MyTask>

@@ -16,7 +16,7 @@ const CompletedTask = () => {
         }
     });
     return (
-        <div className='grid grid-cols-1 gap-5'>
+        <div className='grid grid-cols-1 gap-5 complete-task'>
             {
                 tasks.map(task => <Complete task={task} refetch={refetch}></Complete>)
             }

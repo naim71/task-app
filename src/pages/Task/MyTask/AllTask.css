@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+    .my-task{
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 95vw;
+        padding: 0;
+        margin: 0;
+    }
+}
