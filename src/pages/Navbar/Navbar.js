@@ -10,8 +10,8 @@ const Navbar = () => {
         <div>
             <nav>
                 <input id="nav-toggle" type="checkbox" />
-                <Link to='/' class="logo">TASK<strong>APP</strong></Link>
-                <ul class="links">
+                <Link to='/' className="logo">TASK<strong>APP</strong></Link>
+                <ul className="links">
                     <li><Link to='/home'>Home</Link></li>
                     <li><Link to='/add'>Add Task</Link></li>
                     <li><Link to='/mytask'>My Task</Link></li>
@@ -29,10 +29,10 @@ const Navbar = () => {
                     }
 
                 </ul>
-                <label for="nav-toggle" class="icon-burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <label htmlFor="nav-toggle" className="icon-burger">
+                    <div className="line bg-black"></div>
+                    <div className="line bg-black"></div>
+                    <div className="line bg-black"></div>
                 </label>
 
 

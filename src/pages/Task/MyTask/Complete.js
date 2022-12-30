@@ -42,6 +42,7 @@ const Complete = ({ task, refetch }) => {
                         <button className='bg-red-500 py-2 px-3 hover:bg-red-700 rounded-md text-white' onClick={handleDeleteTask}>Delete</button>
                         <div>
                             <Link disabled to="/completed" className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Completed</Link>
+                            <textarea placeholder='type your comment here'></textarea>
                         </div>
                     </div>
                 <img src={task.image} className="w-32 h-32" alt="" />

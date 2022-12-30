@@ -44,7 +44,7 @@ nav .links a {
 	text-decoration: none;
 }
 
-a:after {
+nav .links a:after {
 	content: "";
 	position: absolute;
 	background-color: #ff3c78;
@@ -56,11 +56,11 @@ a:after {
 
 }
 
-a:hover {
+nav .links a:hover {
 	color: rgb(22, 22, 22);
 }
 
-a:hover:after {
+nav .links a:hover:after {
 	width: 100%;
 }
 
