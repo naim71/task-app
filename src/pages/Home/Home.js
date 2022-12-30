@@ -20,6 +20,7 @@ const Home = () => {
     return (
         <div className='mt-10 mb-10'>
             <p className='text-3xl mb-5 text-[#747474]'>Overview</p>
+            <div></div>
             {
                 user ? <>
                     <div className='bg-[#1874EE] w-full h-96 rounded-xl flex justify-evenly p-10'>

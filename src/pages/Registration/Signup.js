@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthContext/AuthProvider';
 
 const Signup = () => {
@@ -7,6 +8,11 @@ const Signup = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const [createdUserEmail, setcreatedUserEmail] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleSignup = event => {
         event.preventDefault();
@@ -34,10 +40,10 @@ const Signup = () => {
         .then(data => {
             console.log(data);
             form.reset();
-            // if(data.acknowledged){
-            //     toast.success('Product Added Successfully!')
-            //     navigate('/dashboard/myproducts')
-            // }
+            if(data.acknowledged){
+                toast.success('Account Created Successfully!')
+                navigate(from, { replace: true });
+            }
         }
         )
 
