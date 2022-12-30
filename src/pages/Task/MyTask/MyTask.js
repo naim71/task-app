@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 const MyTask = ({ task, refetch }) => {
@@ -12,7 +13,7 @@ const MyTask = ({ task, refetch }) => {
             .then(data => {
                 if (data.deletedCount > 0) {
                     refetch();
-                    //toast.success(`${user.name} deleted successfully`)
+                    toast.success(`${task.title} deleted successfully`)
                 }
             })
     }
@@ -33,11 +34,11 @@ const MyTask = ({ task, refetch }) => {
 
 
     return (
-        <div className='h-full border-l-4 border-blue-600 flex justify-center rounded-md shadow-lg'>
+        <div className='h-full border-l-4 border-blue-600 rounded-md shadow-lg flex justify-between p-5'>
             <div className='flex flex-col'>
-                <p className='text-2xl font-semibold'>{task.title}</p>
-                <p>{task.details}</p>
-                <div className='flex space-x-5'>
+                <p className='text-2xl font-semibold mb-2'>{task.title}</p>
+                <p className='mb-3'>{task.details}</p>
+                <div className='flex items-center space-x-5'>
                     <button className='bg-red-500 py-2 px-3 hover:bg-red-700 rounded-md text-white' onClick={handleDeleteTask}>Delete</button>
                     <button className='bg-blue-500 py-2 px-3 hover:bg-blue-700 rounded-md text-white'>Edit</button>
                     <div>
@@ -48,7 +49,7 @@ const MyTask = ({ task, refetch }) => {
                                 </>
                                 :
                                 <>
-                                    <Link to="/completedtask" className='bg-green-500 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Completed</Link>
+                                    <Link to="/completedtask" className='bg-slate-800 py-2 px-3 hover:bg-green-700 rounded-md text-white'>Completed</Link>
                                 </>
                         }
                     </div>
